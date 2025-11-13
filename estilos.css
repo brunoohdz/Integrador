@@ -1,0 +1,173 @@
+:root {
+    --first-color: #141414;
+    --second-color: #047A83;
+    --third-color: #02203C;
+    --bg-color: #fff;
+    --gray-color-light: #f3f3f3;
+    --gray-color-medium: #ccc;
+    --max-width: 1200px;
+    --header-height: 4rem;
+    --my-section-bg: #D3D3D3;
+}
+
+html {
+    box-sizing: border-box; 
+    font-size: 16px;
+    font-family: "Raleway", sans-serif; 
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding-top: var(--header-height);
+    overflow-x: hidden; 
+    color: black;
+    background-color: var(--bg-color);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+p, ul {
+    margin: 0;
+}
+
+/* Contenedor central */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    width: 90%; 
+}
+
+/* HEADER */
+.header {
+    background-color: black; 
+    height: var(--header-height);
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; 
+}
+
+/* MENÚ */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: var(--second-color); 
+}
+
+.letramenu {
+    font-size: 24px;
+    color: white;
+}
+
+/* SECCIONES */
+.mainbienvenida, .maintarjeta, .mainmultimedia, .mainsobremi {
+    background-color: var(--my-section-bg); 
+    border-radius: 10px;
+    padding: 2rem 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* TARJETAS */
+.tarjetas-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.tarjeta {
+    flex-basis: 300px;
+    border: 3px solid var(--third-color);
+    background-color: beige;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* BOTONES */
+.btn {
+    border: none;
+    border-radius: 0.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: var(--first-color);
+    transition: background-color 0.3s ease-out;
+}
+
+.btn:hover {
+    background-color: var(--second-color);
+}
+
+/* TÍTULOS */
+.section-title {
+    border-bottom: thin solid var(--first-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: white;
+    background-color: rgb(23, 23, 23);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
